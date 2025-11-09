@@ -173,25 +173,6 @@ function ScannerPage() {
               </li>
             </ul>
           </div>
-
-          {/* Test QR Codes Section */}
-          <div className="glass-card rounded-2xl p-6 w-full max-w-md">
-            <h3 className="font-semibold text-gray-900 mb-4">Test QR Codes:</h3>
-            <p className="text-sm text-gray-600 mb-4">
-              Click on a site to view without scanning:
-            </p>
-            <div className="grid grid-cols-2 gap-3">
-              {['pashupatinath', 'boudhanath', 'swayambhunath', 'lumbini'].map((siteId) => (
-                <button
-                  key={siteId}
-                  onClick={() => navigate(`/site/${siteId}`)}
-                  className="btn-secondary text-xs py-2 px-3"
-                >
-                  {siteId.charAt(0).toUpperCase() + siteId.slice(1)}
-                </button>
-              ))}
-            </div>
-          </div>
         </motion.div>
       )}
 
