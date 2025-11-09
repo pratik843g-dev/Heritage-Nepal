@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Scan, Compass, Mountain, Navigation } from 'lucide-react';
+import { Home, Scan, Compass, Mountain, Navigation, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 function Layout({ children }) {
@@ -26,6 +26,15 @@ function Layout({ children }) {
                 </h1>
                 <p className="text-xs text-gray-600">Discover Sacred Sites</p>
               </div>
+            </Link>
+            
+            {/* Admin Button */}
+            <Link
+              to="/admin/login"
+              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-nepal-red/10 to-nepal-blue/10 hover:from-nepal-red/20 hover:to-nepal-blue/20 rounded-xl transition-all duration-200 border border-nepal-red/20"
+            >
+              <Shield className="w-4 h-4 text-nepal-red" />
+              <span className="text-sm font-semibold text-gray-700">Admin</span>
             </Link>
           </div>
         </div>

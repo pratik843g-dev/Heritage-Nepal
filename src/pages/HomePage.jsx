@@ -192,16 +192,6 @@ function HomePage() {
           </div>
         </div>
       </motion.div>
-
-      {/* Discreet Admin Access Link */}
-      <div className="text-center mt-6 pb-4">
-        <Link 
-          to="/admin/login" 
-          className="text-xs text-gray-400 hover:text-nepal-red transition-colors"
-        >
-          Site Administrator
-        </Link>
-      </div>
     </div>
   );
 }
