@@ -5,6 +5,7 @@ import SiteDetailPage from './pages/SiteDetailPage';
 import ExplorePage from './pages/ExplorePage';
 import QRGeneratorPage from './pages/QRGeneratorPage';
 import NearMePage from './pages/NearMePage';
+import FavoritesPage from './pages/FavoritesPage';
 import AdminLogin from './pages/AdminLogin';
 import Layout from './components/Layout';
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Layout><HomePage /></Layout>} />
         <Route path="/scan" element={<Layout><ScannerPage /></Layout>} />
         <Route path="/explore" element={<Layout><ExplorePage /></Layout>} />
+        <Route path="/favorites" element={<Layout><FavoritesPage /></Layout>} />
         <Route path="/near-me" element={<Layout><NearMePage /></Layout>} />
         <Route path="/site/:siteId" element={<Layout><SiteDetailPage /></Layout>} />
         

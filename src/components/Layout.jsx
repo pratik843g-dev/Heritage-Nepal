@@ -9,7 +9,7 @@ function Layout({ children }) {
     { path: '/', icon: Home, label: 'Home' },
     { path: '/scan', icon: Scan, label: 'Scan' },
     { path: '/explore', icon: Compass, label: 'Explore' },
-    { path: '/near-me', icon: Navigation, label: 'Near Me' },
+    { path: '/favorites', icon: Heart, label: 'Saved' },
   ];
 
   return (

@@ -3,11 +3,12 @@ import { motion } from 'framer-motion';
 import { 
   ArrowLeft, MapPin, Clock, DollarSign, Calendar, 
   Star, Info, Building2, Lightbulb, Navigation, Share2,
-  CheckCircle2
+  CheckCircle2, Heart
 } from 'lucide-react';
 import { getSiteById } from '../data/heritageSites';
 import { QRCodeSVG } from 'qrcode.react';
 import { useState } from 'react';
+import { useFavorites } from '../hooks/useFavorites';
 
 function SiteDetailPage() {
   const { siteId } = useParams();
@@ -15,6 +16,8 @@ function SiteDetailPage() {
   const site = getSiteById(siteId);
   const [showQR, setShowQR] = useState(false);
   const [copied, setCopied] = useState(false);
+  const { toggleFavorite, isFavorite } = useFavorites();
+  const favorited = isFavorite(siteId);
 
   if (!site) {
     return (
@@ -62,17 +65,39 @@ function SiteDetailPage() {
           <ArrowLeft className="w-6 h-6 text-gray-900" />
         </button>
 
-        {/* Share Button */}
-        <button
-          onClick={handleShare}
-          className="absolute top-4 right-4 glass-card p-3 rounded-xl hover:bg-white/90 transition-all"
-        >
-          {copied ? (
-            <CheckCircle2 className="w-6 h-6 text-green-600" />
-          ) : (
-            <Share2 className="w-6 h-6 text-gray-900" />
-          )}
-        </button>
+        {/* Action Buttons */}
+        <div className="absolute top-4 right-4 flex gap-2">
+          {/* Favorite Button */}
+          <motion.button
+            whileTap={{ scale: 0.9 }}
+            onClick={() => toggleFavorite(siteId)}
+            className={`glass-card p-3 rounded-xl transition-all ${
+              favorited 
+                ? 'bg-nepal-red/90 hover:bg-nepal-red' 
+                : 'hover:bg-white/90'
+            }`}
+          >
+            <Heart 
+              className={`w-6 h-6 ${
+                favorited 
+                  ? 'text-white fill-white' 
+                  : 'text-gray-900'
+              }`}
+            />
+          </motion.button>
+
+          {/* Share Button */}
+          <button
+            onClick={handleShare}
+            className="glass-card p-3 rounded-xl hover:bg-white/90 transition-all"
+          >
+            {copied ? (
+              <CheckCircle2 className="w-6 h-6 text-green-600" />
+            ) : (
+              <Share2 className="w-6 h-6 text-gray-900" />
+            )}
+          </button>
+        </div>
 
         {/* Title Overlay */}
         <div className="absolute bottom-0 left-0 right-0 p-6">
