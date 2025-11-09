@@ -192,6 +192,38 @@ function HomePage() {
           </div>
         </div>
       </motion.div>
+
+      {/* Support Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+        className="glass-card rounded-3xl p-6 mt-6 bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-orange-100"
+      >
+        <div className="text-center">
+          <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-400 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span className="text-3xl">☕</span>
+          </div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">
+            Support Heritage Preservation
+          </h3>
+          <p className="text-gray-600 text-sm mb-4 max-w-md mx-auto">
+            Help us preserve Nepal's cultural heritage for future generations. Your support keeps this app free and helps maintain heritage sites.
+          </p>
+          <a
+            href="https://ko-fi.com/heritagenepal"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-xl"
+          >
+            <span className="text-xl">💖</span>
+            <span>Support Us on Ko-fi</span>
+          </a>
+          <p className="text-xs text-gray-500 mt-3">
+            Every contribution helps preserve Nepal's heritage 🇳🇵
+          </p>
+        </div>
+      </motion.div>
     </div>
   );
 }

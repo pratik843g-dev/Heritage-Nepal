@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Scan, Compass, Mountain, Navigation, Shield } from 'lucide-react';
+import { Home, Scan, Compass, Mountain, Navigation, Shield, Heart } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 function Layout({ children }) {
@@ -17,7 +17,7 @@ function Layout({ children }) {
       {/* Header */}
       <header className="glass-card sticky top-0 z-50 border-b">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-3">
             <Link to="/" className="flex items-center gap-2">
               <Mountain className="w-8 h-8 text-nepal-red" />
               <div>
@@ -28,14 +28,27 @@ function Layout({ children }) {
               </div>
             </Link>
             
-            {/* Admin Button */}
-            <Link
-              to="/admin/login"
-              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-nepal-red/10 to-nepal-blue/10 hover:from-nepal-red/20 hover:to-nepal-blue/20 rounded-xl transition-all duration-200 border border-nepal-red/20"
-            >
-              <Shield className="w-4 h-4 text-nepal-red" />
-              <span className="text-sm font-semibold text-gray-700">Admin</span>
-            </Link>
+            <div className="flex items-center gap-2">
+              {/* Support Button */}
+              <a
+                href="https://ko-fi.com/heritagenepal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-yellow-50 to-orange-50 hover:from-yellow-100 hover:to-orange-100 rounded-xl transition-all duration-200 border border-orange-200"
+              >
+                <Heart className="w-4 h-4 text-orange-500 fill-orange-500" />
+                <span className="text-sm font-semibold text-gray-700 hidden sm:inline">Support</span>
+              </a>
+              
+              {/* Admin Button */}
+              <Link
+                to="/admin/login"
+                className="flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-nepal-red/10 to-nepal-blue/10 hover:from-nepal-red/20 hover:to-nepal-blue/20 rounded-xl transition-all duration-200 border border-nepal-red/20"
+              >
+                <Shield className="w-4 h-4 text-nepal-red" />
+                <span className="text-sm font-semibold text-gray-700 hidden sm:inline">Admin</span>
+              </Link>
+            </div>
           </div>
         </div>
       </header>
