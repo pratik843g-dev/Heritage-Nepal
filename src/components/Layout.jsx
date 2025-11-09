@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Scan, Compass, Mountain, QrCode } from 'lucide-react';
+import { Home, Scan, Compass, Mountain, Navigation } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 function Layout({ children }) {
@@ -9,7 +9,7 @@ function Layout({ children }) {
     { path: '/', icon: Home, label: 'Home' },
     { path: '/scan', icon: Scan, label: 'Scan' },
     { path: '/explore', icon: Compass, label: 'Explore' },
-    { path: '/qr-generator', icon: QrCode, label: 'QR Codes' },
+    { path: '/near-me', icon: Navigation, label: 'Near Me' },
   ];
 
   return (

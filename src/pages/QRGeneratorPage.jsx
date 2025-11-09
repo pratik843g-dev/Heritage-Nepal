@@ -1,15 +1,36 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { QRCodeSVG } from 'qrcode.react';
-import { Download, QrCode, Search, Globe, Database } from 'lucide-react';
+import { Download, QrCode, Search, Globe, Database, LogOut, Shield } from 'lucide-react';
 import { getAllSites } from '../data/heritageSites';
 
 function QRGeneratorPage() {
+  const navigate = useNavigate();
   const [selectedSite, setSelectedSite] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [qrType, setQrType] = useState('both'); // 'url', 'data', or 'both'
   const [websiteUrl, setWebsiteUrl] = useState('https://nepal-heritage-explorer.netlify.app');
   const allSites = getAllSites();
+
+  // Check if user is admin
+  useEffect(() => {
+    const isAdmin = localStorage.getItem('isAdmin');
+    const loginTime = localStorage.getItem('adminLoginTime');
+    
+    // Session expires after 24 hours
+    const sessionValid = loginTime && (Date.now() - parseInt(loginTime)) < 24 * 60 * 60 * 1000;
+    
+    if (!isAdmin || !sessionValid) {
+      navigate('/admin/login');
+    }
+  }, [navigate]);
+
+  const handleLogout = () => {
+    localStorage.removeItem('isAdmin');
+    localStorage.removeItem('adminLoginTime');
+    navigate('/');
+  };
 
   const filteredSites = allSites.filter(site =>
     site.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -62,6 +83,30 @@ function QRGeneratorPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-nepal-blue/5 via-white to-nepal-red/5 py-8">
       <div className="container mx-auto px-4">
+        {/* Admin Header with Logout */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="flex items-center justify-between mb-6"
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 bg-gradient-to-br from-nepal-red to-nepal-blue rounded-full flex items-center justify-center">
+              <Shield className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <h2 className="text-lg font-bold text-gray-900">Admin Panel</h2>
+              <p className="text-sm text-gray-600">QR Code Management</p>
+            </div>
+          </div>
+          <button
+            onClick={handleLogout}
+            className="flex items-center gap-2 px-4 py-2 bg-red-50 text-red-600 hover:bg-red-100 rounded-xl transition-colors"
+          >
+            <LogOut className="w-4 h-4" />
+            <span className="text-sm font-semibold">Logout</span>
+          </button>
+        </motion.div>
+
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}

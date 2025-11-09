@@ -36,7 +36,7 @@ function HomePage() {
         </p>
         
         {/* Quick Action Buttons */}
-        <div className="grid grid-cols-2 gap-4 mb-4">
+        <div className="grid grid-cols-2 gap-4">
           <Link to="/scan">
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -57,17 +57,17 @@ function HomePage() {
               Explore Sites
             </motion.button>
           </Link>
+          <Link to="/near-me" className="col-span-2">
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full btn-primary flex items-center justify-center gap-2 bg-gradient-to-r from-nepal-blue to-nepal-blue/80 hover:from-nepal-blue/90 hover:to-nepal-blue/70"
+            >
+              <MapPin className="w-5 h-5" />
+              Find Sites Near Me
+            </motion.button>
+          </Link>
         </div>
-        <Link to="/qr-generator">
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="w-full btn-secondary flex items-center justify-center gap-2 bg-gradient-to-r from-nepal-blue/10 to-nepal-red/10 hover:from-nepal-blue/20 hover:to-nepal-red/20"
-          >
-            <QrCode className="w-5 h-5" />
-            Generate QR Codes
-          </motion.button>
-        </Link>
       </motion.div>
 
       {/* Stats Section */}
@@ -192,6 +192,16 @@ function HomePage() {
           </div>
         </div>
       </motion.div>
+
+      {/* Discreet Admin Access Link */}
+      <div className="text-center mt-6 pb-4">
+        <Link 
+          to="/admin/login" 
+          className="text-xs text-gray-400 hover:text-nepal-red transition-colors"
+        >
+          Site Administrator
+        </Link>
+      </div>
     </div>
   );
 }
