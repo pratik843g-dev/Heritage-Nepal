@@ -95,7 +95,7 @@ Medium-term: AR historical overlays, Multi-language support (Nepali, Hindi, Chin
 Long-term: Partner with Nepal Tourism Board, Scale to 100+ sites, Expand internationally
 
 DEMO HIGHLIGHTS:
-- Show QR scanning in action
+- Show QR scanning in actions
 - Demo "Near Me" with real GPS distances
 - Display favorite site with beautiful UI
 - Show admin QR generator

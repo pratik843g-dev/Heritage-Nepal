@@ -1,16 +1,40 @@
-# Heritage Nepal - Project Requirements
-# This is a JavaScript/Node.js project. Dependencies are managed via package.json
+# Heritage Nepal - Quick Setup for New Users
+# ============================================
+# JUST PULLED THE PROJECT? Follow these steps:
+# ============================================
 
-# ==========================================
+# STEP 1: Make sure you have Node.js installed
+#   Download from: https://nodejs.org
+#   Required: Node.js v18.0.0 or higher
+#   Check version: node --version
+
+# STEP 2: Install all dependencies (run in terminal)
+#   Command: npm install
+#   Wait: 2-3 minutes
+#   This downloads all packages automatically
+
+# STEP 3: Run the project
+#   Command: npm run dev
+#   Open browser: http://localhost:5173
+
+# ============================================
+# FULL SETUP GUIDE
+# ============================================
+# See SETUP_GUIDE.md for detailed instructions
+# and troubleshooting help!
+
+# ============================================
 # SYSTEM REQUIREMENTS
-# ==========================================
+# ============================================
 Node.js >= 18.0.0
 npm >= 9.0.0
 Modern web browser (Chrome 90+, Firefox 88+, Safari 14+)
+4GB RAM minimum (8GB recommended)
+500MB free storage
 
-# ==========================================
-# NPM DEPENDENCIES (Production)
-# ==========================================
+# ============================================
+# NPM DEPENDENCIES (Auto-installed)
+# ============================================
 react@^18.3.1
 react-dom@^18.3.1
 react-router-dom@^6.28.0
