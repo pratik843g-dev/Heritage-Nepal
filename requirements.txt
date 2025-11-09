@@ -1,0 +1,82 @@
+# Heritage Nepal - Project Requirements
+# This is a JavaScript/Node.js project. Dependencies are managed via package.json
+
+# ==========================================
+# SYSTEM REQUIREMENTS
+# ==========================================
+Node.js >= 18.0.0
+npm >= 9.0.0
+Modern web browser (Chrome 90+, Firefox 88+, Safari 14+)
+
+# ==========================================
+# NPM DEPENDENCIES (Production)
+# ==========================================
+react@^18.3.1
+react-dom@^18.3.1
+react-router-dom@^6.28.0
+framer-motion@^11.11.11
+lucide-react@^0.454.0
+html5-qrcode@^2.3.8
+qrcode.react@^4.1.0
+
+# ==========================================
+# NPM DEPENDENCIES (Development)
+# ==========================================
+@vitejs/plugin-react@^4.3.3
+vite@^5.4.10
+autoprefixer@^10.4.20
+postcss@^8.4.47
+tailwindcss@^3.4.14
+
+# ==========================================
+# INSTALLATION COMMAND
+# ==========================================
+# npm install
+
+# ==========================================
+# BUILD COMMAND
+# ==========================================
+# npm run build
+
+# ==========================================
+# RUN DEVELOPMENT SERVER
+# ==========================================
+# npm run dev
+
+# ==========================================
+# BROWSER REQUIREMENTS
+# ==========================================
+# Camera API support (for QR scanning)
+# Geolocation API support (for Near Me feature)
+# LocalStorage support (for favorites)
+# ES6+ JavaScript support
+# CSS Grid & Flexbox support
+
+# ==========================================
+# DEPLOYMENT REQUIREMENTS
+# ==========================================
+# Netlify account (free tier)
+# HTTPS enabled (for geolocation in production)
+# Node.js 18+ on build server
+
+# ==========================================
+# OPTIONAL REQUIREMENTS
+# ==========================================
+# Ko-fi account (for donations)
+# Google Analytics (for tracking)
+# Git & GitHub (for version control)
+
+# ==========================================
+# HARDWARE REQUIREMENTS
+# ==========================================
+# Minimum RAM: 4GB (8GB recommended)
+# Storage: 500MB free space
+# Internet: Broadband connection
+
+# ==========================================
+# NOTES
+# ==========================================
+# - This is NOT a Python project (no pip install)
+# - Use 'npm install' to install dependencies
+# - See package.json for exact versions
+# - See REQUIREMENTS.md for detailed documentation
