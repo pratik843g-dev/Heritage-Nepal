@@ -1,0 +1,123 @@
+Create a 14-slide professional hackathon presentation for my project "Heritage Nepal - Smart QR-Based Heritage Tourism Platform"
+
+PROJECT OVERVIEW:
+Heritage Nepal is a modern web application that revolutionizes how tourists discover and explore Nepal's cultural heritage sites. Built with React.js, it combines QR code technology, GPS location services, and offline-first architecture to provide instant access to detailed information about 16 heritage sites including 9 UNESCO World Heritage Sites.
+
+KEY FEATURES:
+1. QR Code Scanner - Camera and image upload scanning for instant site information
+2. Near Me (GPS) - Real-time distance calculation to heritage sites with Demo Mode fallback
+3. Google Maps Integration - One-click directions and map views
+4. Favorites System - Save and bookmark favorite sites with offline support
+5. Admin Panel - Password-protected QR code generator for site management
+6. Offline-First - Works without internet using Data QR codes
+7. 16 Heritage Sites - Comprehensive coverage including Pashupatinath, Boudhanath, Swayambhunath, Lumbini, Patan Durbar, Bhaktapur, Changu Narayan, Muktinath, Janaki Temple, Manakamana, Gorkha Durbar, Rara Lake, Phewa Lake, Chitwan National Park, Dhulikhel
+
+UNIQUE INNOVATIONS:
+- Dual QR System: URL QR codes (online) + Data QR codes (embedded info, works offline)
+- Demo Mode: Location features work without GPS permission using demo coordinates
+- Admin/Tourist Separation: Clean role-based access with password protection
+- LocalStorage Favorites: No backend needed, instant save/load
+- Color-coded Distance Badges: Green (<5km), Blue (5-15km), Gray (>15km)
+
+TECHNOLOGY STACK:
+Frontend: React.js, Vite, TailwindCSS, Framer Motion, React Router
+Libraries: html5-qrcode, qrcode.react, Lucide Icons
+Performance: 705KB bundle (213KB gzipped), <2 second load time, 60 FPS animations
+Deployment: Netlify with HTTPS, automatic SSL, global CDN
+
+PROBLEM WE SOLVE:
+- 1.2 million tourists visit Nepal annually but struggle to find authentic heritage information
+- Language barriers prevent understanding of cultural significance
+- No centralized digital platform for Nepal's 1000+ heritage sites
+- Difficult to navigate and plan heritage tours
+- Remote historical sites lack digital presence
+
+OUR SOLUTION BENEFITS:
+- Instant access to comprehensive site information via QR scanning
+- GPS-powered site discovery shows "X km away" for all nearby sites
+- Works offline with Data QR codes - no internet required
+- Save favorites and plan trips easily
+- Professional admin tools for site management
+- Beautiful mobile-responsive design with Nepal-themed colors
+
+BUSINESS MODEL & REVENUE:
+Target Market: 1.2M annual tourists, $2.2B tourism industry in Nepal
+Revenue Streams:
+1. Freemium - Premium tier at $4.99/month (offline maps, audio guides, AR, ad-free)
+2. Donations - Ko-fi integration (already implemented)
+3. B2B Partnerships - Hotels ($50/device), Tour operators ($200/month), Tourism Board
+4. Affiliate Revenue - Hotel bookings, restaurant commissions
+Projected: $5,000/month revenue within 6 months
+
+SOCIAL IMPACT:
+- Digitally preserve cultural heritage for future generations
+- Make heritage accessible to all visitors regardless of language
+- Support local tourism economy and heritage site funding
+- Educate younger generations about their cultural roots
+- Bridge technology gap in tourism sector
+
+SCALABILITY:
+Current: 16 sites in Nepal
+Phase 2: 50+ major heritage sites across Nepal
+Phase 3: Expand to Bhutan, Tibet, northern India
+Phase 4: Global heritage platform for UNESCO sites worldwide
+Technical: Serverless architecture, CDN delivery, PWA capabilities
+
+USER JOURNEY:
+1. Tourist arrives at heritage site → Scans QR code with phone
+2. Instantly receives rich information (history, architecture, timings, facts, images)
+3. Uses "Near Me" to discover other sites within X kilometers
+4. Clicks "Get Directions" → Opens Google Maps for navigation
+5. Saves favorite sites for trip planning
+6. All works offline with Data QR codes
+
+COMPETITIVE ADVANTAGES:
+- First mover advantage in Nepal's digital heritage space
+- Unique dual QR system (only app with offline Data QR codes)
+- Demo Mode innovation (works without GPS - better UX than competitors)
+- Cultural authenticity (curated by locals, not generic)
+- Production-ready with 16 live sites (not just concept)
+- Modern tech stack with excellent performance
+
+TECHNICAL ACHIEVEMENTS:
+- Haversine formula for accurate distance calculation
+- Geolocation API with graceful fallback
+- QR code generation in two formats (URL + Data)
+- LocalStorage-based offline favorites
+- Password-protected admin with session management
+- Responsive design works on all devices
+- Built in 2 weeks, fully functional
+
+FUTURE ROADMAP:
+Immediate: Audio guides for all sites, Push notifications for nearby sites
+Short-term: User reviews and ratings, Trip planner with multi-site routes
+Medium-term: AR historical overlays, Multi-language support (Nepali, Hindi, Chinese)
+Long-term: Partner with Nepal Tourism Board, Scale to 100+ sites, Expand internationally
+
+DEMO HIGHLIGHTS:
+- Show QR scanning in action
+- Demo "Near Me" with real GPS distances
+- Display favorite site with beautiful UI
+- Show admin QR generator
+- Demonstrate offline capability with Data QR codes
+
+CALL TO ACTION:
+"Join us in preserving Nepal's rich cultural heritage through technology. Together, we can make heritage accessible to millions of tourists and future generations."
+
+DESIGN STYLE FOR PRESENTATION:
+- Use Nepal flag colors: Red (#DC143C) and Blue (#003893) with gold accents (#FFD700)
+- Modern, professional aesthetic with mountain/temple imagery
+- Include phone mockups showing app interface
+- Use icons and visual diagrams where possible
+- Keep text minimal, focus on visuals and key statistics
+- Add emojis sparingly for engagement (🇳🇵 📱 🗺️ ❤️ 🏔️)
+- Show before/after comparisons and user journey flows
+- Include charts for market size and revenue projections
+
+TARGET AUDIENCE: Hackathon judges, investors, tourism industry stakeholders
+
+TONE: Professional yet passionate, data-driven but human-centered, innovative and impactful
+
+PRESENTATION GOAL: Win the hackathon by showing strong technical execution, clear business model, meaningful social impact, and scalable vision
+
+Please create 14 compelling slides that tell this story effectively for a 7-minute hackathon pitch with 3 minutes for Q&A.
